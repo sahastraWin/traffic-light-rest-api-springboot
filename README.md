@@ -189,7 +189,16 @@ git push -u origin main
 4. GET  /api/traffic-light/all                          → all intersections   → 200 OK
 ```
 
-Full examples in **`POSTMAN_API_DOCUMENTATION.md`**.
+---
+
+## 📬 Postman Testing
+
+See the included **`POSTMAN_API_DOCUMENTATION.md`** file in this repo for:
+- ✅ All endpoints with exact URLs
+- ✅ Sample JSON request bodies
+- ✅ Expected responses
+- ✅ Status codes for success & error cases
+- ✅ How to import into Postman as a collection
 
 ---
 
