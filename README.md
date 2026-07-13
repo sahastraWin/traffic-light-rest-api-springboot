@@ -15,8 +15,6 @@
 - [☁️ Deploy on Render](#️-deploy-on-render)
 - [📡 API Flow](#-api-flow)
 - [📬 Postman Testing](#-postman-testing)
-- [❓ FAQ](#-faq)
-
 ---
 
 ## 🧠 Part A: REST Method Theory (GET vs POST vs PUT vs DELETE)
@@ -193,19 +191,6 @@ git push -u origin main
 ```
 
 Full examples in **`POSTMAN_API_DOCUMENTATION.md`**.
-
----
-
-## ❓ FAQ
-
-**Q: Why use a query param (`?intersection=`) instead of a path param?**
-A: Both are valid design choices. Query param was chosen here because `intersection` is optional (defaults to `"main"`) — path params are typically used for required, resource-identifying values. This is itself a good interview talking point about API design decisions.
-
-**Q: Why does a new intersection name not return 404 on first GET?**
-A: Design choice — `getOrCreate()` auto-registers new intersections starting at RED. Alternative valid design: require explicit creation via POST first, then 404 if not found. Both are defensible; be ready to explain your reasoning either way.
-
-**Q: How do I explain this project in the interview?**
-A: *"I modeled a traffic light as a finite state machine using a Java enum with a `next()` method encoding the fixed transition rules. Each intersection is tracked independently in a thread-safe map, so the system supports multiple concurrent traffic lights. I exposed GET for reading state and POST for triggering transitions, deliberately choosing POST over PUT for the 'next' action since it's not idempotent — each call moves the state forward."*
 
 ---
 
