@@ -1,0 +1,195 @@
+{
+  "info": {
+    "name": "Traffic Light API",
+    "_postman_id": "d7a1c9e0-5678-4b2c-8e4f-trafficlight01",
+    "description": "Postman collection for the Traffic Light System API (Spring Boot).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/health",
+          "host": ["{{base_url}}"],
+          "path": ["api", "health"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Current State (main)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/state?intersection=main",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "state"],
+          "query": [
+            {
+              "key": "intersection",
+              "value": "main"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Advance to Next State (main)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/next?intersection=main",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "next"],
+          "query": [
+            {
+              "key": "intersection",
+              "value": "main"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reset to RED (main)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/reset?intersection=main",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "reset"],
+          "query": [
+            {
+              "key": "intersection",
+              "value": "main"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get State - MG-Road",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/state?intersection=MG-Road",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "state"],
+          "query": [
+            {
+              "key": "intersection",
+              "value": "MG-Road"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Advance Next - MG-Road",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/next?intersection=MG-Road",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "next"],
+          "query": [
+            {
+              "key": "intersection",
+              "value": "MG-Road"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get State - Ring-Road",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/state?intersection=Ring-Road",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "state"],
+          "query": [
+            {
+              "key": "intersection",
+              "value": "Ring-Road"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Advance Next - Ring-Road",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/next?intersection=Ring-Road",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "next"],
+          "query": [
+            {
+              "key": "intersection",
+              "value": "Ring-Road"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get State - New Intersection (auto-create)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/state?intersection=Test2",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "state"],
+          "query": [
+            {
+              "key": "intersection",
+              "value": "Test2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Tracked Intersections",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/traffic-light/all",
+          "host": ["{{base_url}}"],
+          "path": ["api", "traffic-light", "all"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
