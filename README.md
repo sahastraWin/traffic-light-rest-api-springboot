@@ -14,7 +14,6 @@
 - [🔀 Push to GitHub](#-push-to-github)
 - [☁️ Deploy on Render](#️-deploy-on-render)
 - [📡 API Flow](#-api-flow)
-- [📬 Postman Testing](#-postman-testing)
 ---
 
 ## 🧠 Part A: REST Method Theory (GET vs POST vs PUT vs DELETE)
